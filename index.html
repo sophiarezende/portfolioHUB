@@ -6,100 +6,340 @@
   <title>portfolioHUB - Sophia Rezende</title>
 
   <style>
-    body {
-      font-family: Arial;
+    * {
       margin: 0;
-      background: linear-gradient(135deg, #fdfbff, #eef1ff);
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff4fb, #eef1ff, #f3fffc);
+      color: #2d2d2d;
+      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #ff7eb3, #6c63ff);
+      background: linear-gradient(135deg, #ff5fa2, #6c63ff, #00c2a8);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px 50px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.96;
+    }
+
+    .highlight {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.2);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      padding: 14px 10px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 6px 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #5b53e6;
+      font-weight: bold;
+      background: #f3f1ff;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      background: #ffedf6;
+      color: #ff4f93;
+      transform: translateY(-2px);
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      max-width: 1050px;
+      margin: 35px auto;
+      padding: 0 20px 30px;
     }
 
     .card {
       background: white;
-      margin: 20px 0;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom: 24px;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(87, 87, 160, 0.12);
+      border-left: 8px solid #6c63ff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:nth-child(1) { border-left-color: #ff5fa2; }
+    .card:nth-child(2) { border-left-color: #6c63ff; }
+    .card:nth-child(3) { border-left-color: #00c2a8; }
+    .card:nth-child(4) { border-left-color: #ffc857; }
+    .card:nth-child(5) { border-left-color: #ff7f50; }
+    .card:nth-child(6) { border-left-color: #7a5cff; }
+    .card:nth-child(7) { border-left-color: #13b89f; }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.14);
     }
 
     h2 {
-      color: #6c63ff;
+      margin-bottom: 14px;
+      color: #5c54ea;
+      font-size: 1.45rem;
     }
 
-    a {
-      color: #ff4d8d;
+    p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .badges {
+      margin-top: 15px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 6px 8px 0 0;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
       font-weight: bold;
+      color: white;
+    }
+
+    .pink { background: #ff5fa2; }
+    .purple { background: #6c63ff; }
+    .green { background: #00b89c; }
+    .yellow { background: #f2b632; color: #333; }
+
+    a {
+      color: #ff4f93;
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .mini-box {
+      background: linear-gradient(135deg, #fdf0f7, #f5f2ff);
+      border: 1px solid #ece7ff;
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px 40px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 800px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>SOPHIA REZENDE</h1>
-  <p>Portfólio Profissional Digital</p>
-</header>
+  <header>
+    <h1>SOPHIA REZENDE</h1>
+    <p>Portfólio Profissional Digital</p>
+    <div class="highlight">Estudante de Análise e Desenvolvimento de Sistemas</div>
+  </header>
 
-<div class="container">
+  <nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#curriculo">Currículo</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#recomendacoes">Recomendações</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-  <div class="card">
-    <h2>Perfil Pessoal</h2>
-    <p>Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência acadêmica anterior em outra área e vivência profissional em atendimento ao cliente. Busco desenvolver minhas habilidades na área de tecnologia e crescer profissionalmente.</p>
+  <div class="container">
+
+    <section class="card" id="perfil">
+      <h2>Perfil Pessoal</h2>
+      <p>
+        Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência acadêmica anterior em outra área de formação e vivência profissional em atendimento ao cliente. Minha trajetória tem contribuído para o desenvolvimento de competências como comunicação, organização, responsabilidade e facilidade para lidar com pessoas e diferentes contextos.
+      </p>
+      <p>
+        Tenho grande interesse na área de tecnologia, especialmente no desenvolvimento de sistemas, aprendizado de novas ferramentas e construção de soluções úteis e práticas. Busco oportunidades para adquirir experiência, fortalecer meus conhecimentos técnicos e crescer profissionalmente.
+      </p>
+      <div class="badges">
+        <span class="badge pink">Tecnologia</span>
+        <span class="badge purple">Desenvolvimento</span>
+        <span class="badge green">Aprendizado Contínuo</span>
+      </div>
+    </section>
+
+    <section class="card" id="curriculo">
+      <h2>Currículo</h2>
+      <div class="grid">
+        <div class="mini-box">
+          <p><strong>Formação Acadêmica</strong></p>
+          <ul>
+            <li>Ensino superior em andamento na área de Análise e Desenvolvimento de Sistemas</li>
+            <li>Vivência acadêmica anterior em outra área de formação</li>
+          </ul>
+        </div>
+
+        <div class="mini-box">
+          <p><strong>Experiência Profissional</strong></p>
+          <ul>
+            <li>Experiência em atendimento ao cliente</li>
+            <li>Desenvolvimento de habilidades interpessoais, organização e comunicação</li>
+          </ul>
+        </div>
+
+        <div class="mini-box">
+          <p><strong>Idiomas</strong></p>
+          <ul>
+            <li>Português</li>
+            <li>Espanhol</li>
+            <li>Inglês</li>
+          </ul>
+        </div>
+
+        <div class="mini-box">
+          <p><strong>Certificações e Cursos</strong></p>
+          <ul>
+            <li>Curso de Cybersecurity - Cisco</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="projetos">
+      <h2>Projetos Acadêmicos e Profissionais</h2>
+      <p>
+        Esta seção reúne atividades e experiências relevantes desenvolvidas ao longo da minha formação, com foco em aprendizado prático e construção de base profissional.
+      </p>
+      <ul>
+        <li>
+          <strong>Curso de Cybersecurity - Cisco:</strong> formação complementar voltada à segurança digital, ampliando minha visão sobre tecnologia, proteção de dados e boas práticas na área.
+        </li>
+        <li>
+          <strong>Atividades acadêmicas em lógica de programação:</strong> desenvolvimento de raciocínio lógico, organização de etapas, resolução de problemas e compreensão de estruturas fundamentais da programação.
+        </li>
+        <li>
+          <strong>Estudos em desenvolvimento de sistemas:</strong> contato com conteúdos relacionados à criação, organização e análise de soluções tecnológicas.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" id="habilidades">
+      <h2>Habilidades e Competências</h2>
+      <div class="grid">
+        <div class="mini-box">
+          <p><strong>Habilidades Técnicas</strong></p>
+          <ul>
+            <li>Interesse em desenvolvimento de sistemas</li>
+            <li>Noções de lógica de programação</li>
+            <li>Conhecimento introdutório em tecnologia e ferramentas digitais</li>
+            <li>Interesse em segurança da informação</li>
+          </ul>
+        </div>
+
+        <div class="mini-box">
+          <p><strong>Competências Pessoais</strong></p>
+          <ul>
+            <li>Comunicação interpessoal</li>
+            <li>Organização</li>
+            <li>Trabalho em equipe</li>
+            <li>Aprendizado rápido</li>
+            <li>Comprometimento</li>
+            <li>Capacidade de adaptação</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="badges">
+        <span class="badge purple">Comunicação</span>
+        <span class="badge green">Organização</span>
+        <span class="badge yellow">Equipe</span>
+        <span class="badge pink">Aprendizado Rápido</span>
+      </div>
+    </section>
+
+    <section class="card" id="recomendacoes">
+      <h2>Recomendações e Testemunhos</h2>
+      <p>
+        Atualmente estou em processo de formação acadêmica e construção da minha trajetória na área de tecnologia. Esta seção permanece reservada para futuras recomendações de professores, supervisores e colegas, que poderão contribuir com avaliações sobre meu desempenho, dedicação e evolução profissional.
+      </p>
+      <p>
+        Mesmo em fase inicial de carreira na área, valorizo o aprendizado contínuo, a responsabilidade e o compromisso com cada oportunidade de desenvolvimento.
+      </p>
+    </section>
+
+    <section class="card" id="contato">
+      <h2>Contato</h2>
+      <p><strong>Email:</strong> sophia.rezende@sempreceub.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sophia-rezende-304a073a2" target="_blank">Meu LinkedIn</a></p>
+      <p><strong>GitHub Pages:</strong> portfolioHUB publicado para apresentação acadêmica e profissional.</p>
+    </section>
+
   </div>
 
-  <div class="card">
-    <h2>Currículo</h2>
-    <ul>
-      <li>Formação: ADS (em andamento)</li>
-      <li>Experiência: Atendimento ao cliente</li>
-      <li>Habilidades: Comunicação, organização, trabalho em equipe</li>
-      <li>Idiomas: Português, Espanhol e Inglês</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Projetos Acadêmicos e Profissionais</h2>
-    <ul>
-      <li>Curso de Cybersecurity - Cisco</li>
-      <li>Atividades acadêmicas em lógica de programação</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Habilidades e Competências</h2>
-    <ul>
-      <li>Comunicação interpessoal</li>
-      <li>Organização</li>
-      <li>Trabalho em equipe</li>
-      <li>Aprendizado rápido</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Recomendações e Testemunhos</h2>
-    <p>Atualmente em formação acadêmica. Espaço reservado para futuras recomendações de professores e supervisores.</p>
-  </div>
-
-  <div class="card">
-    <h2>Contato</h2>
-    <p>Email: sophia.rezende@sempreceub.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sophia-rezende-304a073a2" target="_blank">Meu LinkedIn</a></p>
-  </div>
-
-</div>
+  <footer>
+    © 2026 Sophia Rezende - portfolioHUB
+  </footer>
 
 </body>
 </html>
