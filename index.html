@@ -2,38 +2,79 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>portfolioHUB - Sophia Rezende</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f7fa;
-      color: #333;
+      background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+      color: #2d2d2d;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #6c63ff;
+      background: linear-gradient(135deg, #6c63ff, #8b7dff);
       color: white;
-      padding: 40px;
       text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
     }
 
-    section {
+    header h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
       background: white;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(108, 99, 255, 0.10);
+      border: 1px solid #ececff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(108, 99, 255, 0.14);
     }
 
     h2 {
       color: #6c63ff;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
 
     ul {
       padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     a {
@@ -45,51 +86,109 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .highlight {
+      display: inline-block;
+      background: #f0efff;
+      color: #5a52e0;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px 40px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
   </style>
 </head>
-
 <body>
 
   <header>
     <h1>SOPHIA REZENDE</h1>
-    <p>Portfólio Profissional</p>
+    <p>Portfólio Profissional Digital</p>
+    <div class="highlight">Análise e Desenvolvimento de Sistemas</div>
   </header>
 
-  <section>
-    <h2>Perfil</h2>
-    <p>Sou estudante em formação com uma experiência acadêmica em outra área, com interesse em desenvolver minhas habilidades profissionais e adquirir experiência no mercado de trabalho. Busco oportunidades para crescer, aprender e aplicar meus conhecimentos na prática.</p>
-  </section>
+  <div class="container">
 
-  <section>
-    <h2>Currículo</h2>
-    <ul>
-      <li>Formação: Ensino superior em andamento na área de Análise e Desenvolvimento de Sistemas</li>
-      <li>Experiência: Não tenho experiência ainda na área, porém possuo experiência em atendimento ao cliente</li>
-      <li>Habilidades: Comunicação, organização, trabalho em equipe</li>
-      <li>Idiomas: Português, Espanhol e Inglês</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Perfil</h2>
+      <p>
+        Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência acadêmica anterior em outra área e vivência profissional em atendimento ao cliente. Busco desenvolver minhas habilidades na área de tecnologia, adquirir experiência prática e crescer profissionalmente, aplicando meus conhecimentos com dedicação, responsabilidade e vontade de aprender.
+      </p>
+    </section>
 
-  <section>
-    <h2>Projetos</h2>
-    <p>Curso de Cybersecurity - Cisco.</p>
-  </section>
+    <section class="card">
+      <h2>Objetivo Profissional</h2>
+      <p>
+        Atuar na área de tecnologia, especialmente com desenvolvimento de sistemas, buscando aprendizado contínuo, evolução profissional e participação em projetos que contribuam para meu crescimento e para a geração de soluções úteis e eficientes.
+      </p>
+    </section>
 
-  <section>
-    <h2>Habilidades e Competências</h2>
-    <ul>
-      <li>Comunicação interpessoal</li>
-      <li>Organização</li>
-      <li>Trabalho em equipe</li>
-      <li>Aprendizado rápido</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Currículo</h2>
+      <ul>
+        <li><strong>Formação:</strong> Ensino superior em andamento na área de Análise e Desenvolvimento de Sistemas</li>
+        <li><strong>Experiência:</strong> Experiência em atendimento ao cliente e vivência acadêmica em outra área de formação</li>
+        <li><strong>Habilidades:</strong> Comunicação, organização, trabalho em equipe e aprendizado rápido</li>
+        <li><strong>Idiomas:</strong> Português, Espanhol e Inglês</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Contato</h2>
-    <p>Email: sophia.rezende@sempreceub.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/sophia-rezende-304a073a2" target="_blank">Meu LinkedIn</a></p>
-  </section>
+    <section class="card">
+      <h2>Projetos</h2>
+      <ul>
+        <li>Curso de Cybersecurity - Cisco</li>
+        <li>Atividades acadêmicas voltadas à lógica de programação, desenvolvimento de sistemas e organização de informações</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Habilidades e Competências</h2>
+      <ul>
+        <li>Comunicação interpessoal</li>
+        <li>Organização</li>
+        <li>Trabalho em equipe</li>
+        <li>Aprendizado rápido</li>
+        <li>Interesse em tecnologia e desenvolvimento</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Diferenciais</h2>
+      <ul>
+        <li>Facilidade para aprender novas ferramentas</li>
+        <li>Boa adaptação a diferentes contextos</li>
+        <li>Comprometimento com crescimento profissional</li>
+        <li>Experiência com atendimento ao público</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contato</h2>
+      <p><strong>Email:</strong> sophia.rezende@sempreceub.com</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sophia-rezende-304a073a2" target="_blank">Meu LinkedIn</a></p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Sophia Rezende - portfolioHUB
+  </footer>
 
 </body>
 </html>
